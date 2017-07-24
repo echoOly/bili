@@ -13,7 +13,7 @@
 $api = app('Dingo\Api\Routing\Router');
 
 // v2 version API
-// add in header    Accept:application/vnd.lumen.v2+json
+// add in header    Accept:application/vnd.bili.v1+json
 $api->version('v2', ['namespace' => 'App\Http\Controllers\Api\V2'], function ($api) {
     // Auth
     // login

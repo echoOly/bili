@@ -14,8 +14,14 @@
 $api = app('Dingo\Api\Routing\Router');
 
 // v1 version API
-// choose version add this in header    Accept:application/vnd.lumen.v1+json
+// choose version add this in header    Accept:application/vnd.bili.v1+json
 $api->version('v1', ['namespace' => 'App\Http\Controllers\Api\V1'], function ($api) {
+
+    $api->get('cps', 'TestApiController@getCpsOrder');
+    $api->get('sdk', 'TestApiController@getSdkOrder');
+    $api->get('appinfo', 'TestApiController@appInfo');
+    $api->get('search', 'TestApiController@search');
+    $api->get('appdetail', 'TestApiController@appdetail');
 
     // Auth
     // login
